@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B02A89AE1AF866E2005B923B /* TFFileManagerUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = B02A89AD1AF866E2005B923B /* TFFileManagerUtility.m */; };
 		B072D5AF1B04A44400E05E34 /* 111.flac in Resources */ = {isa = PBXBuildFile; fileRef = B072D5AE1B04A44400E05E34 /* 111.flac */; };
 		B072D5B51B05D4FB00E05E34 /* 6m.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B072D5B41B05D4FB00E05E34 /* 6m.m4a */; };
 		B072D5B71B05D5B300E05E34 /* Yosemite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B072D5B61B05D5B300E05E34 /* Yosemite.jpg */; };
@@ -18,16 +17,17 @@
 		B078F1F51AE8816F00506904 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B078F1F41AE8816F00506904 /* Images.xcassets */; };
 		B078F1F81AE8816F00506904 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B078F1F61AE8816F00506904 /* LaunchScreen.xib */; };
 		B078F2041AE8817000506904 /* FileManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B078F2031AE8817000506904 /* FileManagerDemoTests.m */; };
-		B078F2121AE8919700506904 /* TFFileUploaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B078F2111AE8919700506904 /* TFFileUploaderManager.m */; };
 		B09E34561AE9E0E800187F9D /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B09E34551AE9E0E800187F9D /* demo.jpg */; };
-		B0D982371AEF0FA300356059 /* TFConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D982361AEF0FA300356059 /* TFConfig.m */; };
-		B0D9823A1AEF101000356059 /* TFResponseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D982391AEF101000356059 /* TFResponseInfo.m */; };
-		B0D982401AEF119600356059 /* TFSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D9823F1AEF119600356059 /* TFSessionManager.m */; };
-		B0D982471AEF15D000356059 /* TFResumeUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D982461AEF15D000356059 /* TFResumeUpload.m */; };
-		B0D9824A1AEF17FA00356059 /* TFUploadOption.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D982491AEF17FA00356059 /* TFUploadOption.m */; };
-		B0D982561AEF1AC600356059 /* TFFormUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D982551AEF1AC600356059 /* TFFormUpload.m */; };
 		B0D982581AEF25E100356059 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D982571AEF25E100356059 /* libz.dylib */; };
-		B0E863601AEE416E00B94B5D /* TFFileRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E8635F1AEE416E00B94B5D /* TFFileRecorder.m */; };
+		B0F138A71B0B11300065B526 /* TFResponseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F138901B0B11300065B526 /* TFResponseInfo.m */; };
+		B0F138A81B0B11300065B526 /* TFSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F138921B0B11300065B526 /* TFSessionManager.m */; };
+		B0F138A91B0B11300065B526 /* TFFileRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F138951B0B11300065B526 /* TFFileRecorder.m */; };
+		B0F138AA1B0B11300065B526 /* TFFormUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F138991B0B11300065B526 /* TFFormUpload.m */; };
+		B0F138AB1B0B11300065B526 /* TFResumeUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F1389B1B0B11300065B526 /* TFResumeUpload.m */; };
+		B0F138AC1B0B11300065B526 /* TFUploadOption.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F1389E1B0B11300065B526 /* TFUploadOption.m */; };
+		B0F138AD1B0B11300065B526 /* TFFileUploaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F138A11B0B11300065B526 /* TFFileUploaderManager.m */; };
+		B0F138AE1B0B11300065B526 /* TFConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F138A41B0B11300065B526 /* TFConfig.m */; };
+		B0F138AF1B0B11300065B526 /* TFFileManagerUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F138A61B0B11300065B526 /* TFFileManagerUtility.m */; };
 		B99AA2DB90410F35C1E97F68 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED75EA0759D395CC92188680 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +43,6 @@
 
 /* Begin PBXFileReference section */
 		9194260ECD0021336A430D24 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		B02A89AC1AF866E2005B923B /* TFFileManagerUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFileManagerUtility.h; sourceTree = "<group>"; };
-		B02A89AD1AF866E2005B923B /* TFFileManagerUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFileManagerUtility.m; sourceTree = "<group>"; };
 		B072D5AE1B04A44400E05E34 /* 111.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = 111.flac; sourceTree = SOURCE_ROOT; };
 		B072D5B41B05D4FB00E05E34 /* 6m.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 6m.m4a; sourceTree = SOURCE_ROOT; };
 		B072D5B61B05D5B300E05E34 /* Yosemite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Yosemite.jpg; sourceTree = SOURCE_ROOT; };
@@ -61,28 +59,30 @@
 		B078F1FD1AE8817000506904 /* FileManagerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileManagerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B078F2021AE8817000506904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B078F2031AE8817000506904 /* FileManagerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManagerDemoTests.m; sourceTree = "<group>"; };
-		B078F2101AE8919700506904 /* TFFileUploaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFFileUploaderManager.h; path = ../TFFileUploaderManager.h; sourceTree = "<group>"; };
-		B078F2111AE8919700506904 /* TFFileUploaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFFileUploaderManager.m; path = ../TFFileUploaderManager.m; sourceTree = "<group>"; };
 		B09E34551AE9E0E800187F9D /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
-		B0D982351AEF0FA300356059 /* TFConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFConfig.h; sourceTree = "<group>"; };
-		B0D982361AEF0FA300356059 /* TFConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFConfig.m; sourceTree = "<group>"; };
-		B0D982381AEF101000356059 /* TFResponseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFResponseInfo.h; sourceTree = "<group>"; };
-		B0D982391AEF101000356059 /* TFResponseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFResponseInfo.m; sourceTree = "<group>"; };
-		B0D9823E1AEF119600356059 /* TFSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFSessionManager.h; sourceTree = "<group>"; };
-		B0D9823F1AEF119600356059 /* TFSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFSessionManager.m; sourceTree = "<group>"; };
-		B0D982451AEF15D000356059 /* TFResumeUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFResumeUpload.h; sourceTree = "<group>"; };
-		B0D982461AEF15D000356059 /* TFResumeUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFResumeUpload.m; sourceTree = "<group>"; };
-		B0D982481AEF17FA00356059 /* TFUploadOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFUploadOption.h; sourceTree = "<group>"; };
-		B0D982491AEF17FA00356059 /* TFUploadOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFUploadOption.m; sourceTree = "<group>"; };
-		B0D9824B1AEF18A400356059 /* TFUploadOption+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TFUploadOption+Private.h"; sourceTree = "<group>"; };
-		B0D982541AEF1AC600356059 /* TFFormUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFormUpload.h; sourceTree = "<group>"; };
-		B0D982551AEF1AC600356059 /* TFFormUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFormUpload.m; sourceTree = "<group>"; };
 		B0D982571AEF25E100356059 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		B0D982591AEF266C00356059 /* TFFileManagerKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFileManagerKit.h; sourceTree = "<group>"; };
-		B0E8635D1AEE404C00B94B5D /* TFRecorderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFRecorderDelegate.h; sourceTree = "<group>"; };
-		B0E8635E1AEE416E00B94B5D /* TFFileRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFileRecorder.h; sourceTree = "<group>"; };
-		B0E8635F1AEE416E00B94B5D /* TFFileRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFileRecorder.m; sourceTree = "<group>"; };
-		B0E863661AEE465D00B94B5D /* TFNetWorkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNetWorkDelegate.h; sourceTree = "<group>"; };
+		B0F1388E1B0B11300065B526 /* TFNetWorkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNetWorkDelegate.h; sourceTree = "<group>"; };
+		B0F1388F1B0B11300065B526 /* TFResponseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFResponseInfo.h; sourceTree = "<group>"; };
+		B0F138901B0B11300065B526 /* TFResponseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFResponseInfo.m; sourceTree = "<group>"; };
+		B0F138911B0B11300065B526 /* TFSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFSessionManager.h; sourceTree = "<group>"; };
+		B0F138921B0B11300065B526 /* TFSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFSessionManager.m; sourceTree = "<group>"; };
+		B0F138941B0B11300065B526 /* TFFileRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFileRecorder.h; sourceTree = "<group>"; };
+		B0F138951B0B11300065B526 /* TFFileRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFileRecorder.m; sourceTree = "<group>"; };
+		B0F138961B0B11300065B526 /* TFRecorderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFRecorderDelegate.h; sourceTree = "<group>"; };
+		B0F138981B0B11300065B526 /* TFFormUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFormUpload.h; sourceTree = "<group>"; };
+		B0F138991B0B11300065B526 /* TFFormUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFormUpload.m; sourceTree = "<group>"; };
+		B0F1389A1B0B11300065B526 /* TFResumeUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFResumeUpload.h; sourceTree = "<group>"; };
+		B0F1389B1B0B11300065B526 /* TFResumeUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFResumeUpload.m; sourceTree = "<group>"; };
+		B0F1389C1B0B11300065B526 /* TFUploadOption+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TFUploadOption+Private.h"; sourceTree = "<group>"; };
+		B0F1389D1B0B11300065B526 /* TFUploadOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFUploadOption.h; sourceTree = "<group>"; };
+		B0F1389E1B0B11300065B526 /* TFUploadOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFUploadOption.m; sourceTree = "<group>"; };
+		B0F1389F1B0B11300065B526 /* TFFileManagerKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFileManagerKit.h; sourceTree = "<group>"; };
+		B0F138A01B0B11300065B526 /* TFFileUploaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFileUploaderManager.h; sourceTree = "<group>"; };
+		B0F138A11B0B11300065B526 /* TFFileUploaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFileUploaderManager.m; sourceTree = "<group>"; };
+		B0F138A31B0B11300065B526 /* TFConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFConfig.h; sourceTree = "<group>"; };
+		B0F138A41B0B11300065B526 /* TFConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFConfig.m; sourceTree = "<group>"; };
+		B0F138A51B0B11300065B526 /* TFFileManagerUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFileManagerUtility.h; sourceTree = "<group>"; };
+		B0F138A61B0B11300065B526 /* TFFileManagerUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFileManagerUtility.m; sourceTree = "<group>"; };
 		E828BA1C0B7D2570AAD0532A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ED75EA0759D395CC92188680 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -148,10 +148,10 @@
 		B078F1E61AE8816F00506904 /* FileManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B0F1388C1B0B11300065B526 /* FileManager */,
 				B072D5AE1B04A44400E05E34 /* 111.flac */,
 				B072D5B61B05D5B300E05E34 /* Yosemite.jpg */,
 				B072D5B41B05D4FB00E05E34 /* 6m.m4a */,
-				B078F20D1AE8829C00506904 /* FileManager */,
 				B078F1EB1AE8816F00506904 /* AppDelegate.h */,
 				B078F1EC1AE8816F00506904 /* AppDelegate.m */,
 				B078F1EE1AE8816F00506904 /* ViewController.h */,
@@ -191,65 +191,65 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B078F20D1AE8829C00506904 /* FileManager */ = {
+		B0F1388C1B0B11300065B526 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
-				B0D982441AEF140F00356059 /* Storage */,
-				B0E863651AEE462200B94B5D /* NetWorkHelper */,
-				B0E863611AEE44DC00B94B5D /* Utility */,
-				B0E8635C1AEE403100B94B5D /* Recorder */,
-				B0D982591AEF266C00356059 /* TFFileManagerKit.h */,
+				B0F1388D1B0B11300065B526 /* NetWorkHelper */,
+				B0F138931B0B11300065B526 /* Recorder */,
+				B0F138971B0B11300065B526 /* Storage */,
+				B0F1389F1B0B11300065B526 /* TFFileManagerKit.h */,
+				B0F138A01B0B11300065B526 /* TFFileUploaderManager.h */,
+				B0F138A11B0B11300065B526 /* TFFileUploaderManager.m */,
+				B0F138A21B0B11300065B526 /* Utility */,
 			);
 			path = FileManager;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
-		B0D982441AEF140F00356059 /* Storage */ = {
+		B0F1388D1B0B11300065B526 /* NetWorkHelper */ = {
 			isa = PBXGroup;
 			children = (
-				B078F2101AE8919700506904 /* TFFileUploaderManager.h */,
-				B078F2111AE8919700506904 /* TFFileUploaderManager.m */,
-				B0D982451AEF15D000356059 /* TFResumeUpload.h */,
-				B0D982461AEF15D000356059 /* TFResumeUpload.m */,
-				B0D982481AEF17FA00356059 /* TFUploadOption.h */,
-				B0D982491AEF17FA00356059 /* TFUploadOption.m */,
-				B0D9824B1AEF18A400356059 /* TFUploadOption+Private.h */,
-				B0D982541AEF1AC600356059 /* TFFormUpload.h */,
-				B0D982551AEF1AC600356059 /* TFFormUpload.m */,
+				B0F1388E1B0B11300065B526 /* TFNetWorkDelegate.h */,
+				B0F1388F1B0B11300065B526 /* TFResponseInfo.h */,
+				B0F138901B0B11300065B526 /* TFResponseInfo.m */,
+				B0F138911B0B11300065B526 /* TFSessionManager.h */,
+				B0F138921B0B11300065B526 /* TFSessionManager.m */,
 			);
-			path = Storage;
+			path = NetWorkHelper;
 			sourceTree = "<group>";
 		};
-		B0E8635C1AEE403100B94B5D /* Recorder */ = {
+		B0F138931B0B11300065B526 /* Recorder */ = {
 			isa = PBXGroup;
 			children = (
-				B0E8635D1AEE404C00B94B5D /* TFRecorderDelegate.h */,
-				B0E8635E1AEE416E00B94B5D /* TFFileRecorder.h */,
-				B0E8635F1AEE416E00B94B5D /* TFFileRecorder.m */,
+				B0F138941B0B11300065B526 /* TFFileRecorder.h */,
+				B0F138951B0B11300065B526 /* TFFileRecorder.m */,
+				B0F138961B0B11300065B526 /* TFRecorderDelegate.h */,
 			);
 			path = Recorder;
 			sourceTree = "<group>";
 		};
-		B0E863611AEE44DC00B94B5D /* Utility */ = {
+		B0F138971B0B11300065B526 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				B0D982351AEF0FA300356059 /* TFConfig.h */,
-				B0D982361AEF0FA300356059 /* TFConfig.m */,
-				B02A89AC1AF866E2005B923B /* TFFileManagerUtility.h */,
-				B02A89AD1AF866E2005B923B /* TFFileManagerUtility.m */,
+				B0F138981B0B11300065B526 /* TFFormUpload.h */,
+				B0F138991B0B11300065B526 /* TFFormUpload.m */,
+				B0F1389A1B0B11300065B526 /* TFResumeUpload.h */,
+				B0F1389B1B0B11300065B526 /* TFResumeUpload.m */,
+				B0F1389C1B0B11300065B526 /* TFUploadOption+Private.h */,
+				B0F1389D1B0B11300065B526 /* TFUploadOption.h */,
+				B0F1389E1B0B11300065B526 /* TFUploadOption.m */,
 			);
-			path = Utility;
+			path = Storage;
 			sourceTree = "<group>";
 		};
-		B0E863651AEE462200B94B5D /* NetWorkHelper */ = {
+		B0F138A21B0B11300065B526 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				B0E863661AEE465D00B94B5D /* TFNetWorkDelegate.h */,
-				B0D982381AEF101000356059 /* TFResponseInfo.h */,
-				B0D982391AEF101000356059 /* TFResponseInfo.m */,
-				B0D9823E1AEF119600356059 /* TFSessionManager.h */,
-				B0D9823F1AEF119600356059 /* TFSessionManager.m */,
+				B0F138A31B0B11300065B526 /* TFConfig.h */,
+				B0F138A41B0B11300065B526 /* TFConfig.m */,
+				B0F138A51B0B11300065B526 /* TFFileManagerUtility.h */,
+				B0F138A61B0B11300065B526 /* TFFileManagerUtility.m */,
 			);
-			path = NetWorkHelper;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,18 +392,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0D9823A1AEF101000356059 /* TFResponseInfo.m in Sources */,
+				B0F138AC1B0B11300065B526 /* TFUploadOption.m in Sources */,
+				B0F138AE1B0B11300065B526 /* TFConfig.m in Sources */,
+				B0F138AF1B0B11300065B526 /* TFFileManagerUtility.m in Sources */,
+				B0F138AD1B0B11300065B526 /* TFFileUploaderManager.m in Sources */,
+				B0F138A71B0B11300065B526 /* TFResponseInfo.m in Sources */,
 				B078F1F01AE8816F00506904 /* ViewController.m in Sources */,
-				B0D982561AEF1AC600356059 /* TFFormUpload.m in Sources */,
 				B078F1ED1AE8816F00506904 /* AppDelegate.m in Sources */,
-				B0D9824A1AEF17FA00356059 /* TFUploadOption.m in Sources */,
-				B0D982471AEF15D000356059 /* TFResumeUpload.m in Sources */,
+				B0F138AB1B0B11300065B526 /* TFResumeUpload.m in Sources */,
 				B078F1EA1AE8816F00506904 /* main.m in Sources */,
-				B078F2121AE8919700506904 /* TFFileUploaderManager.m in Sources */,
-				B0D982371AEF0FA300356059 /* TFConfig.m in Sources */,
-				B02A89AE1AF866E2005B923B /* TFFileManagerUtility.m in Sources */,
-				B0E863601AEE416E00B94B5D /* TFFileRecorder.m in Sources */,
-				B0D982401AEF119600356059 /* TFSessionManager.m in Sources */,
+				B0F138A81B0B11300065B526 /* TFSessionManager.m in Sources */,
+				B0F138AA1B0B11300065B526 /* TFFormUpload.m in Sources */,
+				B0F138A91B0B11300065B526 /* TFFileRecorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
