@@ -95,18 +95,6 @@ extern const int kTFFileError;
 
 + (instancetype)responseInfoWithFileError:(NSError *)error;
 
-/**
- *    构造函数
- *
- *    @param status 状态码
- *    @param reqId  服务器请求id
- *    @param xlog   服务器记录
- *    @param body   服务器返回内容
- *    @param host   服务器域名
- *    @param duration 请求完成时间，单位秒
- *
- *    @return 实例
- */
 - (instancetype)init:(int)status
             withHost:(NSString *)host
         withDuration:(double)duration

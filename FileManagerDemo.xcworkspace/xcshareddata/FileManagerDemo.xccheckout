@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8A59B565-951D-4B48-806F-8E20B4D21632</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FileManagerDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>26E2C2C3663FC22394F88DDCD695A6E8FCED3CE3</key>
+		<string>https://github.com/TimeFaceCoder/TFFileManager.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FileManagerDemo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>26E2C2C3663FC22394F88DDCD695A6E8FCED3CE3</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TimeFaceCoder/TFFileManager.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>26E2C2C3663FC22394F88DDCD695A6E8FCED3CE3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>26E2C2C3663FC22394F88DDCD695A6E8FCED3CE3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TFFileManager</string>
+		</dict>
+	</array>
+</dict>
+</plist>

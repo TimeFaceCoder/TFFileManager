@@ -27,7 +27,6 @@
 		B0D9824A1AEF17FA00356059 /* TFUploadOption.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D982491AEF17FA00356059 /* TFUploadOption.m */; };
 		B0D982561AEF1AC600356059 /* TFFormUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D982551AEF1AC600356059 /* TFFormUpload.m */; };
 		B0D982581AEF25E100356059 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D982571AEF25E100356059 /* libz.dylib */; };
-		B0D9825B1AEF2A5000356059 /* demo.gz in Resources */ = {isa = PBXBuildFile; fileRef = B0D9825A1AEF2A5000356059 /* demo.gz */; };
 		B0E863601AEE416E00B94B5D /* TFFileRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E8635F1AEE416E00B94B5D /* TFFileRecorder.m */; };
 		B99AA2DB90410F35C1E97F68 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED75EA0759D395CC92188680 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -80,7 +79,6 @@
 		B0D982551AEF1AC600356059 /* TFFormUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFormUpload.m; sourceTree = "<group>"; };
 		B0D982571AEF25E100356059 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B0D982591AEF266C00356059 /* TFFileManagerKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFileManagerKit.h; sourceTree = "<group>"; };
-		B0D9825A1AEF2A5000356059 /* demo.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; name = demo.gz; path = FileManager/demo.gz; sourceTree = "<group>"; };
 		B0E8635D1AEE404C00B94B5D /* TFRecorderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFRecorderDelegate.h; sourceTree = "<group>"; };
 		B0E8635E1AEE416E00B94B5D /* TFFileRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFileRecorder.h; sourceTree = "<group>"; };
 		B0E8635F1AEE416E00B94B5D /* TFFileRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFileRecorder.m; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 			children = (
 				B072D5AE1B04A44400E05E34 /* 111.flac */,
 				B072D5B61B05D5B300E05E34 /* Yosemite.jpg */,
-				B0D9825A1AEF2A5000356059 /* demo.gz */,
 				B072D5B41B05D4FB00E05E34 /* 6m.m4a */,
 				B078F20D1AE8829C00506904 /* FileManager */,
 				B078F1EB1AE8816F00506904 /* AppDelegate.h */,
@@ -345,7 +342,6 @@
 				B078F1F81AE8816F00506904 /* LaunchScreen.xib in Resources */,
 				B072D5AF1B04A44400E05E34 /* 111.flac in Resources */,
 				B078F1F51AE8816F00506904 /* Images.xcassets in Resources */,
-				B0D9825B1AEF2A5000356059 /* demo.gz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
