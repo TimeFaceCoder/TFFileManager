@@ -68,11 +68,13 @@ typedef void  *(^TFCheckFileCompletionHandler)(NSArray *fileList);
 /**
  *  检查上传文件
  *
- *  @param fileList          待检查的MD5数组
+ *  @param md5List           待检查的MD5数组
+ *  @param sizeList
  *  @param token             上传需要的token,由服务器生成
  *  @param completionHandler 检查完成后的回调函数
  */
-- (void)checkFile:(NSArray *)fileList
+- (void)checkFile:(NSArray *)md5List
+         sizeList:(NSArray *)sizeList
             token:(NSString *)token
          complete:(TFCheckFileCompletionHandler)completionHandler;
 

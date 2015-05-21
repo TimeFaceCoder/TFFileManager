@@ -158,7 +158,8 @@
         };
         
         NSDate *modifyTime = fileAttr[NSFileModificationDate];
-        NSString *recorderKey = [TFFileManagerUtility getMD5StringFromNSString:[kUploadManagerKey stringByAppendingString:filePath]];
+        NSString *recorderKey = [TFFileManagerUtility getMD5StringFromNSString:[kUploadManagerKey stringByAppendingString:[filePath lastPathComponent]]];
+        NSLog(@"recorderKey:%@",recorderKey);
         TFResumeUpload *up = [[TFResumeUpload alloc]
                               initWithData:data
                               withSize:fileSize
@@ -177,7 +178,8 @@
 }
 
 
-- (void)checkFile:(NSArray *)fileList
+- (void)checkFile:(NSArray *)md5List
+         sizeList:(NSArray *)sizeList
             token:(NSString *)token
          complete:(TFCheckFileCompletionHandler)completionHandler {
     if ([TFFileUploaderManager checkAndNotifyError:kUploadManagerKey token:token  file:nil complete:completionHandler]) {
@@ -185,13 +187,13 @@
     }
     __block NSString *url = [[NSString alloc] initWithFormat:@"%@/check/", kTFUpHost];
     
-    NSMutableData *postData = [NSMutableData data];
-    NSString *bodyStr = [fileList componentsJoinedByString:@","];
-    [postData appendData:[bodyStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSString *sizeListString = [sizeList componentsJoinedByString:@","];
+    NSString *md5ListString = [md5List componentsJoinedByString:@","];
+    
     
     [_httpManager post:url
-              withData:postData
-            withParams:nil
+              withData:nil
+            withParams:@{@"sizeList":sizeListString,@"md5List":md5ListString}
            withHeaders:nil
      withCompleteBlock:^(TFResponseInfo *info, NSDictionary *resp) {
          NSArray *checksum = resp[@"checksum"];

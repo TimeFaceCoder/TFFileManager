@@ -28,7 +28,6 @@ typedef void (^task)(void);
 @property (nonatomic) NSDictionary *headers;
 @property (nonatomic, strong) TFUploadOption *option;
 @property (nonatomic, strong) TFUpCompletionHandler complete;
-//@property (nonatomic, strong) NSMutableArray *contexts;
 @property (nonatomic, readonly, getter = isCancelled) BOOL cancelled;
 
 @property int64_t modifyTime;
@@ -292,8 +291,8 @@ typedef void (^task)(void);
 - (void)makeFile:(NSString *)uphost
         complete:(TFCompleteBlock)complete {
     NSString *mime = [[NSString alloc] initWithFormat:@"/mimeType/%@", [TFFileManagerUtility encodeString:self.option.mimeType]];
-
-    __block NSString *url = [[NSString alloc] initWithFormat:@"%@/mkfile/%u%@", uphost, (unsigned int)self.size,mime];
+    NSLog(@"mime:%@",mime);
+    __block NSString *url = [[NSString alloc] initWithFormat:@"%@/mkfile/%u", uphost, (unsigned int)self.size];
     
     [self.option.params enumerateKeysAndObjectsUsingBlock: ^(NSString *key, NSString *obj, BOOL *stop) {
         url = [NSString stringWithFormat:@"%@/%@/%@", url, key, [TFFileManagerUtility encodeString:obj]];

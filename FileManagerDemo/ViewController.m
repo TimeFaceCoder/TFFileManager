@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <EGOCache/EGOCache.h>
 #import "TFFileManagerKit.h"
 
 @interface ViewController ()<TFRecorderDelegate>
@@ -90,13 +91,6 @@
                                                                     @"sName":@"demo.file"}
                                                          checkMD5:NO
                                                cancellationSignal:NULL];
-//
-//    [manager putData:[NSData dataWithContentsOfFile:[sourceURL path]]
-//               token:@"token"
-//            complete:^(TFResponseInfo *info, NSString *key, NSDictionary *resp)
-//    {
-//        NSLog(@"");
-//    } option:option];
     
     [[TFFileUploaderManager sharedInstanceWithRecorder:self] uploadFile:[sourceURL path]
                token:@"token"
@@ -115,13 +109,15 @@
 
 - (NSError *)set:(NSString *)key
             data:(NSData *)value {
+    [[EGOCache globalCache] setData:value forKey:key];
     return nil;
 }
 
 - (NSData *)get:(NSString *)key {
-    return nil;
+    return [[EGOCache globalCache] dataForKey:key];
 }
 - (NSError *)del:(NSString *)key {
+    [[EGOCache globalCache] removeCacheForKey:key];
     return nil;
 }
 

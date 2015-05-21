@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8F83C719C0BEF83D9CA99C39"
-               BuildableName = "libPods-SVProgressHUD.a"
-               BlueprintName = "Pods-SVProgressHUD"
+               BlueprintIdentifier = "2D76D254C2FA8A182C921950"
+               BuildableName = "libPods-EGOCache.a"
+               BlueprintName = "Pods-EGOCache"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

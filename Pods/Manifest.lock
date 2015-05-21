@@ -20,14 +20,17 @@ PODS:
   - AFNetworking/UIKit (2.5.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - EGOCache (2.1.3)
   - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - AFNetworking
+  - EGOCache
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  EGOCache: f0295dbe041156acabd39021354ad1045ee49e72
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
 COCOAPODS: 0.36.3
