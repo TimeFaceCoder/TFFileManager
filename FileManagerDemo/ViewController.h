@@ -11,8 +11,10 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *uploadButton;
+@property (strong, nonatomic) IBOutlet UIButton *checkButton;
 @property (strong, nonatomic) IBOutlet UIProgressView *progressView;
 - (IBAction)startUpload:(id)sender;
+- (IBAction)checkFile:(id)sender;
 
 @end
 

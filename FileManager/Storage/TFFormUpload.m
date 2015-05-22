@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSData *data;
 @property (nonatomic, strong) id <TFNetWorkDelegate> httpManager;
 @property (nonatomic) int retryTimes;
+@property (nonatomic, strong) NSString *fileName;
 @property (nonatomic, strong) NSString *key;
 @property (nonatomic, strong) NSString *token;
 @property (nonatomic, strong) TFUploadOption *option;
@@ -31,6 +32,7 @@
 
 - (instancetype)initWithData:(NSData *)data
                      withKey:(NSString *)key
+                     withFileName:(NSString *)fileName
                    withToken:(NSString *)token
        withCompletionHandler:(TFUpCompletionHandler)block
                   withOption:(TFUploadOption *)option
@@ -38,6 +40,7 @@
     if (self = [super init]) {
         _data = data;
         _key = key;
+        _fileName = fileName;
         _token = token;
         _option = option != nil ? option : [TFUploadOption defaultOptions];
         _complete = block;
@@ -48,15 +51,11 @@
 
 - (void)put {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    NSString *fileName = _key;
     if (_key) {
         parameters[@"key"] = _key;
     }
-    else {
-        fileName = @"?";
-    }
     
-    parameters[@"token"] = _token;
+    parameters[@"uploadToken"] = _token;
     
     [parameters addEntriesFromDictionary:_option.params];
     
@@ -97,7 +96,7 @@
         [_httpManager multipartPost:nextHost
                            withData:_data
                          withParams:parameters
-                       withFileName:fileName
+                       withFileName:_fileName
                        withMimeType:_option.mimeType
                   withCompleteBlock:retriedComplete
                   withProgressBlock:p
@@ -107,7 +106,7 @@
     [_httpManager multipartPost:kTFUpHost
                        withData:_data
                      withParams:parameters
-                   withFileName:fileName
+                   withFileName:_fileName
                    withMimeType:_option.mimeType
               withCompleteBlock:complete
               withProgressBlock:p

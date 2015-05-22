@@ -27,7 +27,7 @@ typedef void (^TFUpCompletionHandler)(TFResponseInfo *info, NSString *key, NSDic
  *
  *  @param fileList 需要上传的文件MD5数组
  */
-typedef void  *(^TFCheckFileCompletionHandler)(NSArray *fileList);
+typedef void (^TFCheckFileCompletionHandler)(NSArray *fileList);
 
 @interface TFFileUploaderManager : NSObject
 /**

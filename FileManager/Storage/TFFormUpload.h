@@ -16,6 +16,7 @@
 
 - (instancetype)initWithData:(NSData *)data
                      withKey:(NSString *)key
+                withFileName:(NSString *)fileName
                    withToken:(NSString *)token
        withCompletionHandler:(TFUpCompletionHandler)block
                   withOption:(TFUploadOption *)option

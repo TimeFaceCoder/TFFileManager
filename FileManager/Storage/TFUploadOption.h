@@ -36,6 +36,8 @@ typedef BOOL (^TFUpCancellationSignal)(void);
  */
 @property (copy, nonatomic, readonly) NSString *mimeType;
 
+@property (copy, nonatomic, readonly) NSString *fileName;
+
 /**
  *    是否进行md5校验
  */
@@ -64,6 +66,7 @@ typedef BOOL (^TFUpCancellationSignal)(void);
  *  @return TFUploadOption
  */
 - (instancetype)initWithMime:(NSString *)mimeType
+                withFileName:(NSString *)fileName
              progressHandler:(TFUpProgressHandler)progress
                       params:(NSDictionary *)params
                     checkMD5:(BOOL)check

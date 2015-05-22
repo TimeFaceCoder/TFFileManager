@@ -79,6 +79,7 @@
     NSURL *sourceURL = [[NSBundle mainBundle] URLForResource:@"Yosemite" withExtension:@"jpg"];
     
     TFUploadOption *option = [[TFUploadOption alloc] initWithMime:@"image/JPEG"
+                                                     withFileName:@"demo.jpg"
                                                   progressHandler:^(NSString *key, float percent)
                               {
                                   dispatch_async(dispatch_get_main_queue(), ^{
@@ -92,6 +93,15 @@
                                                          checkMD5:NO
                                                cancellationSignal:NULL];
     
+    UIImage *image = [UIImage imageNamed:@"demo.jpg"];
+    NSData *imageData = UIImageJPEGRepresentation(image, 1);
+    
+//    [[TFFileUploaderManager sharedInstanceWithRecorder:self] uploadData:imageData token:@"TOKEN" complete:^(TFResponseInfo *info, NSString *key, NSDictionary *resp) {
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//                        [SVProgressHUD dismiss];
+//                    });
+//    } option:option];
+    
     [[TFFileUploaderManager sharedInstanceWithRecorder:self] uploadFile:[sourceURL path]
                token:@"token"
             complete:^(TFResponseInfo *info, NSString *key, NSDictionary *resp)
@@ -101,6 +111,22 @@
         });
     } option:option];
     
+    
+    
+}
+
+- (IBAction)checkFile:(id)sender {
+    UIImage *image = [UIImage imageNamed:@"demo.jpg"];
+    NSData *imageData = UIImageJPEGRepresentation(image, 1);
+    NSString *md5 = [TFFileManagerUtility getMD5StringFromNSData:imageData];
+    NSLog(@"@(imageData.length):%@",@(imageData.length));
+    NSArray *sizeList = @[@"6550059",@(imageData.length),@"6550070"];
+    NSLog(@"sizeList:%@",sizeList);
+    NSArray *md5List = @[md5,@"d51b4cb3560b39e9a4e7a8f78ac52b46",@"76b47216cc54ff9e82bebcd0df3e4f11"];
+    
+    [[TFFileUploaderManager sharedInstanceWithRecorder:self] checkFile:md5List sizeList:sizeList token:@"TOKEN" complete:^(NSArray *fileList) {
+        NSLog(@"fileList:%@",fileList);
+    }];
     
     
 }

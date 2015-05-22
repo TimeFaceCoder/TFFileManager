@@ -8,9 +8,9 @@
 
 #import "TFConfig.h"
 
-NSString *const kTFUpHost = @"http://192.168.0.34:8082/tfupload/upload";
+NSString *const kTFUpHost = @"http://192.168.10.100:8082/tfupload/upload";
 
-NSString *const kTFUpHostBackup = @"http://192.168.0.34:8082/tfupload/upload";
+NSString *const kTFUpHostBackup = @"http://192.168.10.100:8082/tfupload/upload";
 
 NSString *const kUploadManagerKey = @"TIMEFACE_UPLOAD_KEY";
 

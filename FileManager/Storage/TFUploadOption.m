@@ -34,16 +34,18 @@ static NSString *mime(NSString *mimeType) {
 }
 
 - (instancetype)initWithProgessHandler:(TFUpProgressHandler)progress {
-    return [self initWithMime:nil progressHandler:progress params:nil checkMD5:NO cancellationSignal:nil];
+    return [self initWithMime:nil withFileName:nil progressHandler:progress params:nil checkMD5:NO cancellationSignal:nil];
 }
 
 - (instancetype)initWithMime:(NSString *)mimeType
+                withFileName:(NSString *)fileName
              progressHandler:(TFUpProgressHandler)progress
                       params:(NSDictionary *)params
                     checkMD5:(BOOL)check
           cancellationSignal:(TFUpCancellationSignal)cancel {
     if (self = [super init]) {
         _mimeType = mime(mimeType);
+        _fileName = fileName;
         _progressHandler = progress != nil ? progress : ^(NSString *key, float percent) {
         };
         _params = [TFUploadOption filteParam:params];
@@ -61,7 +63,7 @@ static NSString *mime(NSString *mimeType) {
 }
 
 + (instancetype)defaultOptions {
-    return [[TFUploadOption alloc] initWithMime:nil progressHandler:nil params:nil checkMD5:NO cancellationSignal:nil];
+    return [[TFUploadOption alloc] initWithMime:nil withFileName:nil progressHandler:nil params:nil checkMD5:NO cancellationSignal:nil];
 }
 
 

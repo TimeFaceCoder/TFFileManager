@@ -206,11 +206,11 @@ typedef void (^task)(void);
             [self nextTask:offset retriedTimes:retried host:host];
             return;
         }
-//        NSString *md5 = resp[@"md5"];
-//        if (md5 == nil || ![md5 isEqualToString:_chunkMD5]) {
-//            [self nextTask:offset retriedTimes:retried host:host];
-//            return;
-//        }
+        NSString *md5 = resp[@"md5"];
+        if (md5 == nil || ![md5 isEqualToString:_chunkMD5]) {
+            [self nextTask:offset retriedTimes:retried host:host];
+            return;
+        }
         [self record:offset + chunkSize];
         [self nextTask:offset + chunkSize retriedTimes:retried host:host];
     };

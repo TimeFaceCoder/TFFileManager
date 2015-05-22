@@ -108,6 +108,7 @@
     TFFormUpload *up = [[TFFormUpload alloc]
                         initWithData:data
                         withKey:kUploadManagerKey
+                        withFileName:option.fileName
                         withToken:token
                         withCompletionHandler:completionHandler
                         withOption:option
