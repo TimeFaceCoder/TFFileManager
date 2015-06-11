@@ -22,11 +22,11 @@ typedef void (^task)(void);
 @property (nonatomic, strong) NSData *data;
 @property (nonatomic, strong) id <TFNetWorkDelegate> httpManager;
 @property UInt32 size;
-@property (nonatomic) int retryTimes;
-@property (nonatomic, strong) NSString *key;
-@property (nonatomic, strong) NSString *recorderKey;
-@property (nonatomic) NSDictionary *headers;
-@property (nonatomic, strong) TFUploadOption *option;
+@property (nonatomic        ) int                   retryTimes;
+@property (nonatomic, strong) NSString              *key;
+@property (nonatomic, strong) NSString              *recorderKey;
+@property (nonatomic        ) NSMutableDictionary   *headers;
+@property (nonatomic, strong) TFUploadOption        *option;
 @property (nonatomic, strong) TFUpCompletionHandler complete;
 @property (nonatomic, readonly, getter = isCancelled) BOOL cancelled;
 
@@ -73,7 +73,9 @@ typedef void (^task)(void);
         _key = key;
         _option = option != nil ? option : [TFUploadOption defaultOptions];
         _complete = block;
-        _headers = @{ @"uploadToken":token, @"Content-Type":@"application/octet-stream" };
+        _headers = [NSMutableDictionary dictionary];
+        [_headers setObject:token forKey:@"uploadToken"];
+        [_headers setObject:@"application/octet-stream" forKey:@"Content-Type"];
         _recorder = recorder;
         _httpManager = http;
         if (time != nil) {
@@ -261,11 +263,11 @@ typedef void (^task)(void);
          complete:(TFCompleteBlock)complete {
     NSData *data = [self.data subdataWithRange:NSMakeRange(offset, (unsigned int)chunkSize)];
     UInt32 blockIndex = [self calcBlockIndex:offset blockSize:blockSize];
-    NSString *url = [[NSString alloc] initWithFormat:@"%@/mkblock/%u-%u", uphost, (unsigned int)blockSize,(unsigned int)blockIndex];
+    NSString *url = [[NSString alloc] initWithFormat:@"%@/mkblock/%u/%u", uphost, (unsigned int)blockSize,(unsigned int)blockIndex];
     NSLog(@"url:%@",url);
     _chunkMD5 = [TFFileManagerUtility getMD5StringFromNSData:data];
     
-    [self post:url withData:data withCompleteBlock:complete withProgressBlock:progressBlock];
+    [self post:url withData:data withParams:nil withCompleteBlock:complete withProgressBlock:progressBlock];
 }
 
 - (void)putChunk:(NSString *)uphost
@@ -278,10 +280,9 @@ typedef void (^task)(void);
     UInt32 blockIndex = offset/kTFBlockSize;
     UInt32 chunkIndex = [self calcChunkIndex:offset blockIndex:blockIndex size:size];
     
-    NSString *url = [[NSString alloc] initWithFormat:@"%@/putblock/%u-%u-%U", uphost, (unsigned int)chunkOffset,(unsigned int)blockIndex,(unsigned int)chunkIndex];
-    NSLog(@"url:%@",url);
+    NSString *url = [[NSString alloc] initWithFormat:@"%@/putblock/%u/%u/%u", uphost, (unsigned int)chunkOffset,(unsigned int)blockIndex,(unsigned int)chunkIndex];
     _chunkMD5 = [TFFileManagerUtility getMD5StringFromNSData:data];
-    [self post:url withData:data withCompleteBlock:complete withProgressBlock:progressBlock];
+    [self post:url withData:data withParams:nil withCompleteBlock:complete withProgressBlock:progressBlock];
 }
 
 - (BOOL)isCancelled {
@@ -290,22 +291,26 @@ typedef void (^task)(void);
 
 - (void)makeFile:(NSString *)uphost
         complete:(TFCompleteBlock)complete {
-    NSString *mime = [[NSString alloc] initWithFormat:@"/mimeType/%@", [TFFileManagerUtility encodeString:self.option.mimeType]];
-    NSLog(@"mime:%@",mime);
-    __block NSString *url = [[NSString alloc] initWithFormat:@"%@/mkfile/%u", uphost, (unsigned int)self.size];
+    NSString *mime = [[NSString alloc] initWithFormat:@"mimeType/%@", [TFFileManagerUtility encodeString:self.option.mimeType]];
+    __block NSString *url = [[NSString alloc] initWithFormat:@"%@/mkfile/%u/%@", uphost, (unsigned int)self.size,mime];
     
-    [self.option.params enumerateKeysAndObjectsUsingBlock: ^(NSString *key, NSString *obj, BOOL *stop) {
-        url = [NSString stringWithFormat:@"%@/%@/%@", url, key, [TFFileManagerUtility encodeString:obj]];
-    }];
+//    [self.option.params enumerateKeysAndObjectsUsingBlock: ^(NSString *key, NSString *obj, BOOL *stop) {
+//        url = [NSString stringWithFormat:@"%@/%@/%@", url, key, [TFFileManagerUtility encodeString:obj]];
+//    }];
     NSMutableData *postData = [NSMutableData data];
-    [self post:url withData:postData withCompleteBlock:complete withProgressBlock:nil];
+    [self post:url withData:postData withParams:self.option.params withCompleteBlock:complete withProgressBlock:nil];
 }
 
 - (void)         post:(NSString *)url
              withData:(NSData *)data
+           withParams:(NSDictionary *)params
     withCompleteBlock:(TFCompleteBlock)completeBlock
     withProgressBlock:(TFInternalProgressBlock)progressBlock {
-    [_httpManager post:url withData:data withParams:nil withHeaders:_headers withCompleteBlock:completeBlock withProgressBlock:progressBlock withCancelBlock:nil];
+    [_httpManager post:url
+              withData:data
+            withParams:params
+           withHeaders:_headers
+     withCompleteBlock:completeBlock withProgressBlock:progressBlock withCancelBlock:nil];
 }
 
 - (void)run {

@@ -191,16 +191,18 @@
     NSString *sizeListString = [sizeList componentsJoinedByString:@","];
     NSString *md5ListString = [md5List componentsJoinedByString:@","];
     
-    
-    [_httpManager post:url
-              withData:nil
-            withParams:@{@"sizeList":sizeListString,@"md5List":md5ListString}
-           withHeaders:nil
-     withCompleteBlock:^(TFResponseInfo *info, NSDictionary *resp) {
+    [_httpManager multipartPost:url
+                       withData:nil
+                     withParams:@{@"sizeList":sizeListString,@"md5List":md5ListString}
+                   withFileName:nil
+                   withMimeType:nil
+              withCompleteBlock:^(TFResponseInfo *info, NSDictionary *resp)
+     {
          NSArray *checksum = resp[@"checksum"];
          completionHandler(checksum);
-    } withProgressBlock:NULL
-       withCancelBlock:NULL];
+     }
+              withProgressBlock:NULL
+                withCancelBlock:NULL];
 }
 
 @end

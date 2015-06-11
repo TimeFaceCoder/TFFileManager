@@ -25,7 +25,7 @@ static NSString *mime(NSString *mimeType) {
     }
     
     [params enumerateKeysAndObjectsUsingBlock: ^(NSString *key, NSString *obj, BOOL *stop) {
-        if ([key hasPrefix:@"t:"] && ![obj isEqualToString:@""]) {
+        if (![obj isEqualToString:@""]) {
             ret[key] = obj;
         }
     }];

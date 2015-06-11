@@ -152,7 +152,7 @@ static NSString *userAgent = nil;
 - (void)multipartPost:(NSString *)url
              withData:(NSData *)data
            withParams:(NSDictionary *)params
-         withFileName:(NSString *)key
+         withFileName:(NSString *)fileName
          withMimeType:(NSString *)mime
     withCompleteBlock:(TFCompleteBlock)completeBlock
     withProgressBlock:(TFInternalProgressBlock)progressBlock
@@ -162,7 +162,12 @@ static NSString *userAgent = nil;
                                     URLString:url
                                     parameters:params
                                     constructingBodyWithBlock: ^(id < AFMultipartFormData > formData) {
-                                        [formData appendPartWithFileData:data name:@"file" fileName:key mimeType:mime];
+                                        if (data) {
+                                            [formData appendPartWithFileData:data
+                                                                        name:@"file"
+                                                                    fileName:fileName
+                                                                    mimeType:mime];
+                                        }
                                     }
                                     
                                     error:nil];

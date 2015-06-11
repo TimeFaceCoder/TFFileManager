@@ -16,7 +16,7 @@
 - (void)multipartPost:(NSString *)url
              withData:(NSData *)data
            withParams:(NSDictionary *)params
-         withFileName:(NSString *)key
+         withFileName:(NSString *)fileName
          withMimeType:(NSString *)mime
     withCompleteBlock:(TFCompleteBlock)completeBlock
     withProgressBlock:(TFInternalProgressBlock)progressBlock

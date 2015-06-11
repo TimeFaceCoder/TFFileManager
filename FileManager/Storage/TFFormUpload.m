@@ -103,7 +103,7 @@
                     withCancelBlock:nil];
     };
     
-    [_httpManager multipartPost:kTFUpHost
+    [_httpManager multipartPost:[kTFUpHost stringByAppendingString:@"/uploadfile"]
                        withData:_data
                      withParams:parameters
                    withFileName:_fileName

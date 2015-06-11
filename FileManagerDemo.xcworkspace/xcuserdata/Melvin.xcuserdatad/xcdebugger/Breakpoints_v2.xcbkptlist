@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FileManager/Storage/TFResumeUpload.m"
-            timestampString = "453888377.25318"
+            filePath = "FileManager/NetWorkHelper/TFSessionManager.m"
+            timestampString = "455710315.441528"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "-nextTask:retriedTimes:host:"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "-post:withData:withParams:withHeaders:withCompleteBlock:withProgressBlock:withCancelBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
