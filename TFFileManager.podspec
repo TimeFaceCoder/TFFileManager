@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author             = { "Melvin" => "yangmin@timeface.cn" }
   s.social_media_url   = "http://www.timeface.cn"
   s.ios.deployment_target = "7.0"
-  s.source       = { :git => "https://github.com/TimeFaceCoder/TFFileManager.git"}
+  s.source       = { :git => "https://github.com/TimeFaceCoder/TFFileManager.git",:tag => "0.0.1"}
   s.source_files  = "FileManager/**/*.{h,m}"
   s.requires_arc = true
   s.dependency 'AFNetworking'

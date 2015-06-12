@@ -18,7 +18,6 @@
 		B078F1F81AE8816F00506904 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B078F1F61AE8816F00506904 /* LaunchScreen.xib */; };
 		B078F2041AE8817000506904 /* FileManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B078F2031AE8817000506904 /* FileManagerDemoTests.m */; };
 		B09E34561AE9E0E800187F9D /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B09E34551AE9E0E800187F9D /* demo.jpg */; };
-		B0D982581AEF25E100356059 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D982571AEF25E100356059 /* libz.dylib */; };
 		B0F138A71B0B11300065B526 /* TFResponseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F138901B0B11300065B526 /* TFResponseInfo.m */; };
 		B0F138A81B0B11300065B526 /* TFSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F138921B0B11300065B526 /* TFSessionManager.m */; };
 		B0F138A91B0B11300065B526 /* TFFileRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F138951B0B11300065B526 /* TFFileRecorder.m */; };
@@ -92,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0D982581AEF25E100356059 /* libz.dylib in Frameworks */,
 				B99AA2DB90410F35C1E97F68 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
